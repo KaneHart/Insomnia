@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * @author dmillerw
  */
-@Mod(modid = "Insomnia", name = "Insomnia", version = "%MOD_VERSION%")
+@Mod(modid = "Insomnia", acceptableRemoteVersions = "*", name = "Insomnia", version = "%MOD_VERSION%")
 public class Insomnia {
 
     @Mod.Instance("Insomnia")
@@ -77,7 +77,7 @@ public class Insomnia {
             event.result = EntityPlayer.EnumStatus.OTHER_PROBLEM;
 
             // Then send our own
-            entityPlayer.addChatComponentMessage(new ChatComponentTranslation("tile.bed.insomnia"));
+            entityPlayer.addChatComponentMessage(new ChatComponentTranslation(tile.bed.insomnia));
         } else {
             event.result = enumStatus;
         }
